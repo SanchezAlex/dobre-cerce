@@ -1,0 +1,49 @@
+---
+title: Добре Серце | Контакти
+---
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}
+
+<!-- CONTACTS STARTS -->
+
+<div class="contacts">
+  <div class="contacts__container">
+    <div class="contacts__phone">
+      <a href="tel:+380777777777">+38 (077) 777 77 77</a>
+    </div>
+    <br>
+    <div class="contacts__email">
+      <a href="mailto:help@kinderheart.ua">help@kinderheart.ua</a>
+    </div>
+    <div class="contacts__form">
+      <span>Заповніть своє ім'я та контактні дані, і Вам нададуть консультацію по телефону</span>
+      <form>
+        <input type="text" placeholder="Ім'я">
+        <input type="tel" placeholder="Телефон">
+        <button>Відправити</button>
+      </form>
+      <div class="contacts__footer">
+        <a href="#twitter">
+          {{mixins.icon('twitter')}}
+        </a>
+        <a href="#fb">
+          {{mixins.icon('facebook')}}
+        </a>
+        <a href="#vk">
+          {{mixins.icon('vk')}}
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="chat">
+    <a href="#chat"></a>
+  </div>
+</div>
+
+<!-- CONTACTS ENDS -->
+
+{% endblock %}

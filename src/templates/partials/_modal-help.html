@@ -1,0 +1,60 @@
+{% set
+helps = [
+  {
+    img: 'icon-hand',
+    kind: 'Зробити',
+    desc: 'Натискайте цю кнопку, якщо Ви хочете зробити, наприклад ремонт у дитячому будинку, складну операцію, побудувати дитячий майданчик абопобудувати житло для переселенців і т.д.',
+    desc2: 'Ця кнопка, для організацій, які можуть взяти на себе відповідальність за увесь проект.'
+  },
+  {
+    img: 'icon-wallet',
+    kind: 'Фінансова допомога',
+    desc: 'Перераховуйте гроші тим, хто дійсно потребує цього.'
+  },
+  {
+    img: 'icon-clothes',
+    kind: 'Матеріальна допомога',
+    desc: 'Зберіть ліки, речі, їжу, іграшки та інше, для тих, кому це необхідно.'
+  },
+  {
+    img: 'icon-heart-help',
+    kind: 'Волонтерство',
+    desc: 'Допоможіть ділом або професійними навичками. Підтримайте проекти своєю роботою.'
+  }
+]
+%}
+
+
+<!-- MODAL HELP STARTS -->
+
+<div id="modal-help" class="modal">
+
+  <div class="modal__help">
+    <span class="btn_close close-help"></span>
+
+    <h2>Види допомоги</h2>
+    <div class="modal__help__wrap">
+      {% for help in helps %}
+      <div class="modal__help__block">
+        <div class="modal__help__image">
+          <span class="{{help.img}}"></span>
+        </div>
+        <div class="modal__help__kind">
+          <span>{{help.kind}}</span>
+        </div>
+        <div class="modal__help__desc">
+          <p>{{help.desc}}
+            <br>
+            <br>
+            {{help.desc2}}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL HELP ENDS -->
+

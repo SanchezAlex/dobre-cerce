@@ -1,0 +1,954 @@
+// MAIN PAGE STARTS
+
+.intro
+	margin-top: 30px
+
+	&__container
+		position: relative
+		height: calc(100vh - 90px)
+		padding: 110px 100px 20px 150px
+		z-index: 1
+
+	&__main
+		padding-top: 25px
+
+		h1
+			display: inline-block
+			font-size: 64px
+			font-family: sans-serif, "Myriad Pro"
+
+		a
+			margin-left: 20px
+			font-size: 18px
+			font-family: sans-serif, "Myriad Pro"
+			color: rgb(207, 221, 235)
+
+			span
+				display: inline-block
+				position: relative
+				width: 28px
+				height: 28px
+				vertical-align: middle
+				margin-left: 5px
+
+	&__block
+		padding-top: 87px
+
+		p
+			padding: 25px 0
+			font-size: 18px
+			font-family: sans-serif, "Myriad Pro"
+
+			&:before
+				content: ''
+				display: block
+				width: 70px
+				padding-bottom: 25px
+				border-top: 3px solid #fff
+
+		a
+			font-size: 18px
+			font-family: sans-serif, "Myriad Pro"
+			color: #fff
+
+			span
+				display: inline-block
+				position: relative
+				width: 28px
+				height: 28px
+				vertical-align: middle
+				margin-left: 5px
+
+		button
+			display: inline-block
+			margin-left: 120px
+			padding: 20px 26px
+			background: #533b5e
+			border-radius: 10px
+			box-shadow: 1px 1px 18px 12px #764369
+			color: #fff
+			font-size: 18px
+			font-family: sans-serif, "Myriad Pro"
+			transition: .3s ease
+
+			&:hover
+				background: #45305e
+				box-shadow: 1px 1px 18px 12px #762b64
+
+	&__footer
+		position: absolute
+		bottom: 20px
+
+		span
+			padding-right: 10px
+
+		a
+			display: inline-block
+			margin: 0 5px
+			width: 35px
+			height: 30px
+			vertical-align: middle
+
+			&:hover
+				svg
+					fill: #cc2970
+
+			svg
+				fill: #C5D5E7
+				width: 100%
+				height: 100%
+				transition: .3s ease
+
+	&__angle
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 0
+
+		&__img
+			position: absolute
+			bottom: 0
+			right: 0
+			z-index: 1
+
+			img
+				vertical-align: bottom
+
+// MAIN PAGE ENDS
+
+
+// MODAL HELP STARTS
+
+.modal
+	display: none
+	position: fixed
+	z-index: 2
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: auto
+	background-color: rgba(184,195,215,.6)
+	-webkit-animation-name: fadeIn
+	-webkit-animation-duration: 0.4s
+	animation-name: fadeIn
+	animation-duration: 0.4s
+
+
+	&__help
+		position: absolute
+		top: 130px
+		left: 65px
+		width: calc(100% - 130px)
+		background-color: #fefefe
+		color: #363b5d
+		-webkit-animation-name: slideIn
+		-webkit-animation-duration: .7s
+		animation-name: slideIn
+		animation-duration: .7s
+		padding: 20px 40px 100px
+		border-radius: 20px
+		box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.9)
+
+		h2
+			padding-top: 57px
+			padding-bottom: 20px
+			font-size: 64px
+			font-family: sans-serif, "Myriad Pro"
+			color: #363B5D
+			text-align: center
+
+		&__wrap
+			display: flex
+			justify-content: space-between
+			padding-top: 60px
+
+		&__block
+			width: 23%
+			padding: 0 1%
+
+		&__image
+			display: inline-block
+			padding: 5px
+			border-radius: 22px
+			border: 2px solid #c5d5e6
+			span
+				display: inline-block
+
+		&__kind
+			display: inline-flex
+			justify-content: center
+			flex-direction: column
+			height: 94px
+			width: 120px
+			padding-left: 15px
+			vertical-align: top
+			font-size: 18px
+			font-family: sans-serif, "Myriad Pro"
+			color: #464D70
+
+		&__desc
+			margin-left: 98px
+			padding-left: 15px
+			font-size: 12px
+			font-family: sans-serif, "Myriad Pro"
+			color: #646985
+			line-height: 2.25
+
+		.close-help
+			position: absolute
+			top: -55px
+			right: 10px
+
+
+// MODAL HELP ENDS
+
+
+// MODAL FORM STARTS
+
+.modal__form
+	position: absolute
+	top: 130px
+	left: 65px
+	width: calc(100% - 130px)
+	background-color: #fefefe
+	color: #363b5d
+	-webkit-animation-name: slideIn
+	-webkit-animation-duration: .7s
+	animation-name: slideIn
+	animation-duration: .7s
+	border-radius: 20px
+	box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.9)
+
+	h2
+		text-align: center
+		font-size: 64px
+		font-family: sans-serif, "Myriad Pro"
+		color: #363B5D
+
+	&__wrap
+		padding: 70px 75px 10px 180px
+
+	&__activity
+		width: 100%
+		max-width: 308px
+		margin: 30px auto
+		border: 2px solid #363b5d
+		border-radius: 5px
+		+clr
+
+		button
+			display: inline-block
+			width: 50%
+			padding: 16px 0
+			float: left
+			background-color: transparent
+			text-align: center
+			font-size: 14px
+			font-family: sans-serif, "Myriad Pro"
+			color: #363b5d
+
+		.active-form
+			background-color: #363b5d
+			color: #fff
+
+		.non-active-form
+			background-color: transparent
+			color: #363b5d
+
+	&__data
+		+clr
+
+		label
+			display: inline-block
+
+		span
+			display: inline-block
+			padding-bottom: 5px
+			font-size: 14px
+			font-family: sans-serif, "Myriad Pro"
+			color: #A4AAB2
+
+		input
+			display: inline-block
+			position: relative
+			width: 100%
+			padding: 13px
+			border-radius: 5px
+			background-color: #f3f7fa
+
+		.half
+			display: inline-block
+			width: calc(100% / 2)
+
+			&:first-of-type
+				margin-right: 20px
+
+		.personal
+			display: inline-block
+			width: 42%
+			padding-top: 20px
+
+		.flex-block
+			display: flex
+			justify-content: space-between
+			padding: 15px 0
+
+		.full
+			display: inline-block
+			width: 100%
+			margin: 15px 0
+			position: relative
+
+			button
+				position: absolute
+				top: 33px
+				right: -80px
+				background-color: transparent
+				font-size: 14px
+				font-family: sans-serif, "Myriad Pro"
+				color: #59A3E8
+
+		.location
+			display: inline-block
+			width: 42%
+			max-width: 560px
+			padding-top: 20px
+			float: right
+
+		.organization
+			display: none
+			padding-top: 70px
+			+clr
+
+			.bank-details
+				display: inline-block
+				width: 42%
+				max-width: 560px
+
+			.tax-details
+				display: inline-block
+				width: 42%
+				max-width: 560px
+				float: right
+
+	&__help
+
+		h2
+			padding-top: 75px
+
+		.choose-help
+			display: block
+			padding: 25px 0
+			text-align: center
+			font-size: 18px
+			font-family: sans-serif, "Myriad Pro"
+			color: #363B5D
+
+		.kind
+			display: flex
+			justify-content: space-around
+			padding-top: 25px
+
+			&__block
+				display: flex
+				justify-content: space-between
+				align-items: center
+				margin: 0 10px
+
+			&__img
+				display: inline-block
+				margin-right: 25px
+				padding: 14px
+				border: 2px solid #c5d5e6
+				border-radius: 22px
+				transition: .3s ease
+
+				span
+					display: inline-block
+
+				&:hover
+					background-color: #9c5d9a
+					cursor: pointer
+					border-color: #9c5d9a
+
+					+ .kind__text
+						color: #9c5d9a
+
+			&__text
+				display: inline-block
+				max-width: 160px
+				font-size: 18px
+				font-family: sans-serif, "Myriad Pro"
+				color: #c5d5e6
+				transition: .3s ease
+
+			&__financial
+				margin-top: 30px
+				border: 2px solid #c5d5e6
+				border-radius: 22px
+				position: relative
+
+				&:before,
+				&:after
+					content: ""
+					bottom: 100%
+					left: 27%
+					border: solid transparent
+					height: 0
+					width: 0
+					position: absolute
+					pointer-events: none
+
+				&:before
+					border-bottom-color: #c5d5e6
+					border-width: 21px
+					margin-left: -21px
+
+				&:after
+					border-bottom-color: #fefefe
+					border-width: 17px
+					margin-left: -17px
+
+			&__wrap
+				display: flex
+				justify-content: space-between
+				align-items: baseline
+				padding: 13px
+
+				.method
+					display: flex
+					flex-wrap: wrap
+					max-width: 740px
+
+					&__title
+						display: block
+						width: 100%
+						margin-left: 12px
+						font-size: 14px
+						font-family: sans-serif, "Myriad Pro"
+						color: rgb(164, 170, 178)
+
+					&__block
+						display: flex
+						align-items: center
+						flex-direction: column
+						width: 190px
+						margin: 12px
+						padding: 10px
+						background-color: #c5d5e6
+						border-radius: 15px
+						font-size: 12px
+						font-family: sans-serif, "Myriad Pro"
+						color: #fff
+						transition: .3s ease
+
+						&:hover
+							background-color: #9c5d9a
+
+
+					&__icon
+						display: inline-block
+
+						span
+							display: inline-block
+
+				.data
+					display: flex
+					flex-wrap: wrap
+					max-width: 500px
+					margin-right: 12px
+					margin-left: 20px
+
+					&__title
+						display: block
+						width: 100%
+						font-size: 14px
+						font-family: sans-serif, "Myriad Pro"
+						color: rgb(164, 170, 178)
+
+					&__card
+						width: 100%
+						margin-top: 12px
+						padding: 25px 35px
+						border-radius: 20px
+						background-color: #c5d5e6
+
+						label
+							display: block
+							margin-bottom: 10px
+							font-size: 14px
+							font-family: sans-serif, "Myriad Pro"
+							color: #fff
+
+						input
+							padding: 14px
+							border-radius: 7px
+
+						&__number
+							display: flex
+							flex-wrap: wrap
+							justify-content: space-between
+							margin-bottom: 15px
+							+clr
+
+							label
+								width: 100%
+
+							input
+								width: 23%
+
+						&__date
+							display: inline-block
+							width: 40%
+							margin-top: 30px
+
+							input
+								width: 100%
+
+						&__cvv
+							display: inline-block
+							width: 40%
+							margin-top: 30px
+							float: right
+
+							input
+								width: 100%
+
+		button
+			display: block
+			margin: 65px auto
+			padding: 20px 130px
+			border-radius: 10px
+			font-size: 18px
+			font-family: sans-serif, "Myriad Pro"
+			color: #fff
+			transition: .3s ease
+
+			&:hover
+				box-shadow: 0 0 30px 6px #f5afbb
+
+	.close-form
+		position: absolute
+		top: -55px
+		right: 10px
+
+
+/* Modal animation
+@-webkit-keyframes slideIn
+	from
+		top: 1000px
+		opacity: 0
+
+	to
+		top: 130px
+		opacity: 1
+
+
+@keyframes slideIn
+	from
+		top: 1000px
+		opacity: 0
+
+	to
+		top: 130px
+		opacity: 1
+
+@-webkit-keyframes fadeIn
+	from
+		opacity: 0
+
+	to
+		opacity: 1
+
+
+@keyframes fadeIn
+	from
+		opacity: 0
+
+	to
+		opacity: 1
+
+// MODAL FORM ENDS
+
+
+// PROJECTS PAGE STARTS
+
+.projects
+	margin-top: 30px
+	overflow: hidden
+
+	&__nav
+		margin-left: -150px
+		margin-right: -1000px
+
+		ul
+			list-style: none
+
+			li
+				display: inline-block
+				margin: 0 100px
+				position: relative
+
+				a
+					color: #545d7c
+					font-size: 64px
+					font-family: sans-serif, "Myriad Pro"
+					transition: .3s ease
+
+					&:hover
+						color: #ffffff
+
+				.prjct-active
+					color: #fff !important
+					opacity: 1 !important
+
+				span
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					padding-left: 65px
+					font-size: 18px
+					font-family: sans-serif, "Myriad Pro"
+					color: #ED4E67
+
+	&__container
+		width: 100%
+		padding: 40px 50px 153px 200px
+
+	&__kinds-help
+		display: block
+		padding-right: 20px
+		padding-bottom: 60px
+		text-align: right
+
+		p
+			display: inline-block
+			font-size: 14px
+			font-family: sans-serif, "Myriad Pro"
+			color: #fff
+
+			span
+				display: inline-block
+				margin-left: 20px
+				width: 25px
+				height: 25px
+				vertical-align: middle
+
+	&__content
+		width: 100%
+
+	&__block
+		+clr
+		overflow: hidden
+
+		.accordion
+			border: none
+			outline: none
+			transition: 0.4s
+
+		.hide
+			max-height: 134px
+			transition: max-height 0.2s ease-out
+
+		.acc-active
+			height: 100%
+
+			&:after
+				opacity: 0
+
+		&__image
+			display: inline-block
+			position: relative
+			max-width: 32%
+			float: left
+			font-size: 0
+
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background-color: #050a0f
+				opacity: .4
+				transition: .3s ease-out
+
+			&:hover:after
+				opacity: 0
+
+			.special-sign
+				display: inline-block
+				position: absolute
+				top: 50%
+				left: 10px
+				z-index: 3
+				padding: 5px 10px
+				border-radius: 5px
+				color: #fff
+				font-size: 14px
+				font-family: sans-serif, 'Myriad Pro'
+				transform: translateY(-50%)
+
+		&__main
+			display: flex
+			justify-content: space-between
+			max-width: 65%
+			padding-left: 4%
+			border-bottom: 1px solid #8992a7
+
+		&__text
+			display: inline-block
+			width: 60%
+
+		&__time
+			display: inline-block
+			padding: 10px 0
+			font-size: 12px
+			font-family: sans-serif, "Myriad Pro"
+			color: #CFDDEB
+
+		&__title
+			padding: 20px 0
+			font-size: 18px
+			font-family: sans-serif, "Myriad Pro"
+			color: #fff
+
+		&__desc
+			padding-bottom: 9px
+			font-size: 14px
+			font-family: sans-serif, "Myriad Pro"
+			line-height: 1.5
+			color: #fff
+
+		&__done
+			display: inline-block
+			padding: 17px 0
+			font-size: 16px
+			font-family: sans-serif, "Myriad Pro"
+			color: #6f7f9f
+
+	&__help-icons
+		display: inline-block
+		width: 40px
+		float: right
+		transition: visibility .3s ease-out
+
+
+		button
+			display: inline-block
+			margin: 12px 0
+			height: 40px
+			background-color: transparent
+			cursor: default
+
+			span
+				display: inline-block
+				position: relative
+				color: #CFDDEB
+
+				&.icon-hand-small,
+				&.icon-hand-small2
+					&:before
+						content: ''
+						transition: .4s ease
+					&:hover:before
+						content: 'зробити'
+						position: absolute
+						width: 90px
+						left: -100px
+						top: 10px
+						text-align: right
+
+				&.icon-wallet-small,
+				&.icon-wallet-small2
+					&:before
+						content: ''
+						transition: .4s ease
+					&:hover:before
+						content: 'фінансова допомога'
+						position: absolute
+						width: 90px
+						left: -100px
+						top: 5px
+						text-align: right
+
+				&.icon-clothes-small,
+				&.icon-clothes-small2
+					&:before
+						content: ''
+						transition: .4s ease
+					&:hover:before
+						content: 'матеріальна допомога'
+						position: absolute
+						width: 90px
+						left: -100px
+						top: 5px
+						text-align: right
+
+				&.icon-heart-help-small,
+				&.icon-heart-help-small2
+					&:before
+						content: ''
+						transition: .4s ease
+					&:hover:before
+						content: 'волонтерство'
+						position: absolute
+						width: 90px
+						left: -100px
+						top: 10px
+						text-align: right
+
+// PROJECTS PAGE ENDS
+
+
+// URGENT PAGE STARTS
+
+.urgent-bg
+	background-image: linear-gradient(60deg, rgb(229, 54, 86) 40%, rgb(189, 77, 125) 60%, rgb(143, 103, 171) 100%)
+
+	.header
+		&__search
+			&__icon
+
+			.icon-search
+				&:hover
+					fill: #6d6de2
+
+	.projects
+		&__nav
+			ul
+				li
+					a
+						color: #fff
+						opacity: .3
+						transition: .3s ease-out
+
+						&:hover
+							opacity: 1
+
+				span
+					color: #96A6F6
+
+		&__block
+			&__done
+				color: #c08eae
+
+	.chat
+		a
+			background-color: #96A6F6
+			box-shadow: 0 0 10px 3px #96A6F6
+
+
+// URGENT PAGE ENDS
+
+
+// CONTACTS PAGE STARTS
+
+.contacts
+	width: 100%
+	height: calc(100vh - 90px)
+	margin-top: 30px
+
+	&__container
+		text-align: center
+
+	&__phone
+		display: inline-block
+		padding-top: 205px
+
+		a
+			font-size: 64px
+			font-family: sans-serif, "Myriad Pro"
+			color: #C5D5E6
+			transition: .3s ease-out
+
+			&:hover
+				color: #5077ea
+
+	&__email
+		display: inline-block
+		padding-top: 45px
+
+		a
+			font-size: 64px
+			font-family: sans-serif, "Geometria"
+			color: #fff
+			font-weight: bold
+			transition: .3s ease-out
+
+			&:hover
+				color: #5077ea
+
+	&__form
+		padding-top: 140px
+
+		span
+			display: inline-block
+			padding-bottom: 30px
+			font-size: 18px
+			font-family: sans-serif, "Gilroy"
+			color: #fff
+			line-height: 1.5
+
+		input
+			display: inline-block
+			width: 266px
+			margin: 0 15px
+			padding: 20px 15px
+			background-color: #687ba8
+			border-radius: 8px
+
+			font-size: 14px
+			font-family: sans-serif, "Geometria"
+			color: #fff
+
+			&::-webkit-input-placeholder
+				color: #fff
+			&:-moz-placeholder
+				color: #fff
+			&::-moz-placeholder
+				color: #fff
+			&:-ms-input-placeholder
+				color: #fff
+
+		button
+			display: inline-block
+			padding: 20px 96px
+			margin-left: 15px
+			background-color: #2f456b
+			border-radius: 8px
+			font-size: 14px
+			font-family: sans-serif, "Geometria"
+			color: #fff
+			transition: .3s ease
+
+			&:hover
+				background-color: #1e2456
+
+	&__footer
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 40px
+
+		a
+			display: inline-block
+			margin: 0 5px
+			width: 35px
+			height: 25px
+
+			&:hover
+				svg
+					fill: #cc2970
+
+			svg
+				fill: #c5d5e6
+				width: 100%
+				height: 100%
+				transition: .3s ease
+
+// CONTACTS PAGE ENDS

@@ -1,0 +1,138 @@
+---
+title: Добре Серце | Проекти
+
+projects: [
+  {
+    img: 'img/kids-prjct-1.jpg',
+    date: '07.05.2017',
+    title: 'Необхідна допомога дитячому будинку',
+    desc: 'Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.',
+    done: 'Зібрано 10 000 з 25 000 UAH',
+    icon1: 'icon-hand-small',
+    icon2: 'icon-wallet-small',
+    icon3: 'icon-clothes-small',
+    icon4: 'icon-heart-help-small'
+  },
+  {
+    img: 'img/kids-prjct-1.jpg',
+    special: 'Терміново',
+    special_css: 'special-sign',
+    date: '04.05.2017',
+    title: 'Операція дитині, яка постраждала в зоні АТО',
+    desc: '',
+    done: '',
+    icon1: '',
+    icon2: 'icon-wallet-hand',
+    icon3: 'icon-wallet-small',
+    icon4: 'icon-clothes-small'
+  },
+  {
+    img: 'img/kids-prjct-1.jpg',
+    date: '03.05.2017',
+    title: 'Освітній загальний курс з основ WEB технологій для школярів',
+    desc: '',
+    done: '',
+    icon1: '',
+    icon2: '',
+    icon3: 'icon-wallet-small',
+    icon4: 'icon-heart-help-small'
+  },
+  {
+    img: 'img/kids-prjct-1.jpg',
+    date: '03.05.2017',
+    title: 'Будування дитячого майданчику у місті Київ',
+    desc: '',
+    done: '',
+    icon1: '',
+    icon2: '',
+    icon3: 'icon-wallet-small',
+    icon4: 'icon-heart-help-small'
+  },
+  {
+    img: 'img/kids-prjct-1.jpg',
+    date: '01.04.2017',
+    title: 'Будування дитячого майданчику у місті Київ',
+    desc: '',
+    done: '',
+    icon1: '',
+    icon2: '',
+    icon3: '',
+    icon4: ''
+  },
+  {
+    img: 'img/kids-prjct-1.jpg',
+    date: '01.04.2017',
+    title: 'Будування дитячого майданчику у місті Київ',
+    desc: '',
+    done: '',
+    icon1: '',
+    icon2: '',
+    icon3: '',
+    icon4: ''
+  }
+]
+---
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}
+
+<!-- PROJECTS STARTS -->
+
+<div class="projects" id="projects">
+
+  <div class="projects__nav">
+    <ul class="projects__menu">
+      <li><a href="#war">Війна</a><span></span></li>
+      <li><a href="#ecology">Екологія</a><span></span></li>
+      <li><a href="#kids" class="prjct-active">Діти</a><span>24</span></li>
+      <li><a href="#education">Освіта</a><span></span></li>
+    </ul>
+  </div>
+
+  <div class="projects__container">
+    <div class="projects__kinds-help">
+      <p>Види допомоги <span class="icon-arrow-down"></span>
+      </p>
+    </div>
+    <div class="projects__content">
+
+      {% for project in projects %}
+
+      <div class="projects__block">
+        <div class="projects__block__image accordion hide">
+          <img src="{{project.img}}" alt="project cover">
+          <span class="bg-color {{project.special_css}}">{{project.special}}</span>
+        </div>
+        <div class="projects__block__main hide">
+          <div class="projects__block__text">
+            <span class="projects__block__time">{{project.date}}</span>
+            <h3 class="projects__block__title">{{project.title}}</h3>
+            <p class="projects__block__desc">{{project.desc}}</p>
+            <span class="projects__block__done">{{project.done}}</span>
+          </div>
+          <div class="projects__help-icons">
+            <button><span class="{{project.icon1}}"></span></button>
+            <button><span class="{{project.icon2}}"></span></button>
+            <button><span class="{{project.icon3}}"></span></button>
+            <button><span class="{{project.icon4}}"></span></button>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+
+  <div class="chat">
+    <a href="#chat"></a>
+  </div>
+
+</div>
+
+<!-- PROJECTS ENDS -->
+
+{% endblock %}

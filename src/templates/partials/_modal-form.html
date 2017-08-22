@@ -1,0 +1,293 @@
+{% set
+forms = [
+  {
+    icon: 'icon-hand',
+    kind: 'Зробити'
+  },
+  {
+    icon: 'icon-wallet',
+    kind: 'Фінансова допомога'
+  },
+  {
+    icon: 'icon-clothes',
+    kind: 'Матеріальна допомога'
+  },
+  {
+    icon: 'icon-heart-help',
+    kind: 'Волонтерство'
+  }
+]
+%}
+
+{% set
+methods = [
+  {
+    icon: 'icon-visa',
+    name: 'Картка Visa/MasterCard'
+  },
+  {
+    icon: 'icon-privat24',
+    name: 'Приват 24'
+  },
+  {
+    icon: 'icon-terminals',
+    name: 'Термінали України'
+  },
+  {
+    icon: 'icon-webmoney',
+    name: 'Webmoney'
+  },
+  {
+    icon: 'icon-paypal',
+    name: 'PayPal'
+  }
+]
+%}
+
+
+<!-- MODAL FORM STARTS -->
+
+<div id="modal-form" class="modal">
+
+  <div class="modal__form">
+    <span class="btn_close close-form"></span>
+    <div class="modal__form__wrap">
+      <div class="modal__form__data">
+        <h2>Заповніть форму</h2>
+        <div class="modal__form__activity">
+          <button id="individual" class="btn-who active-form">Фіз. особа</button>
+          <button id="legal" class="btn-who">Юр. особа</button>
+        </div>
+
+        <form class="personal">
+          <div class="flex-block">
+            <div class="half">
+              <label for="name">
+                <span>Ім'я</span>
+                <abbr title=""></abbr>
+              </label>
+              <input type="text" id="name">
+            </div>
+            <div class="half">
+              <label for="last-name">
+                <span>Фамілія</span>
+                <abbr title=""></abbr>
+              </label>
+              <input type="text" id="last-name">
+            </div>
+          </div>
+          <div class="full">
+            <label for="company">
+              <span>Назва компанії, організації</span>
+              <abbr title=""></abbr>
+            </label>
+            <input type="text" id="company">
+            <button class="add-logo">+ Логотип</button>
+          </div>
+          <div class="full">
+            <label for="email">
+              <span>Email-адрес</span>
+              <abbr title=""></abbr>
+            </label>
+            <input type="email" id="email">
+          </div>
+          <div class="full">
+            <label for="phone">
+              <span>Номер телефону</span>
+              <abbr title=""></abbr>
+            </label>
+            <input type="tel" id="phone">
+          </div>
+        </form>
+
+        <form class="location">
+          <div class="full">
+            <label for="country">
+              <span>Країна</span>
+              <abbr title=""></abbr>
+            </label>
+            <input type="text" id="country">
+          </div>
+          <div class="flex-block">
+            <div class="half">
+              <label for="town">
+                <span>Місто</span>
+                <abbr title=""></abbr>
+              </label>
+              <input type="text" id="town">
+            </div>
+            <div class="half">
+              <label for="region">
+                <span>Штат, район</span>
+                <abbr title=""></abbr>
+              </label>
+              <input type="text" id="region">
+            </div>
+          </div>
+          <div class="full">
+            <label for="address">
+              <span>Адреса</span>
+              <abbr title=""></abbr>
+            </label>
+            <input type="text" id="address">
+          </div>
+          <div class="full">
+            <div class="half">
+              <label for="post-index">
+                <span>Поштовий індекс</span>
+                <abbr title=""></abbr>
+              </label>
+              <input type="number" id="post-index">
+            </div>
+          </div>
+        </form>
+
+        <div class="organization" id="organization">
+          <form class="bank-details">
+            <div class="full">
+              <label for="legal-address">
+                <span>Юридична адреса</span>
+                <abbr title=""></abbr>
+              </label>
+              <input type="text" id="legal-address">
+            </div>
+            <div class="flex-block">
+              <div class="half">
+                <label for="bank-name">
+                  <span>Найменування банку</span>
+                  <abbr title=""></abbr>
+                </label>
+                <input type="text" id="bank-name">
+              </div>
+              <div class="half">
+                <label for="bank-code">
+                  <span>МФО банку</span>
+                  <abbr title=""></abbr>
+                </label>
+                <input type="text" id="bank-code">
+              </div>
+            </div>
+            <div class="full">
+              <label for="bank-account">
+                <span>Розрахунковий рахунок</span>
+                <abbr title=""></abbr>
+              </label>
+              <input type="text" id="bank-account">
+            </div>
+          </form>
+          <form class="tax-details">
+            <div class="flex-block">
+              <div class="half">
+                <label for="zkpo">
+                  <span>ЗКПО</span>
+                  <abbr title=""></abbr>
+                </label>
+                <input type="text" id="zkpo">
+              </div>
+              <div class="half">
+                <label for="tax-type">
+                  <span>Тип оподаткування</span>
+                  <abbr title=""></abbr>
+                </label>
+                <input type="text" id="tax-type">
+              </div>
+            </div>
+            <div class="flex-block">
+              <div class="half">
+                <label for="inn">
+                  <span>ІНН</span>
+                  <abbr title=""></abbr>
+                </label>
+                <input type="text" id="inn">
+              </div>
+              <div class="half">
+                <label for="tax-system">
+                  <span>Система оподаткування</span>
+                  <abbr title=""></abbr>
+                </label>
+                <input type="text" id="tax-system">
+              </div>
+            </div>
+            <div class="flex-block">
+              <div class="half">
+                <label for="tel-bookkeeping">
+                  <span>Телефон бухгалтерії</span>
+                  <abbr title=""></abbr>
+                </label>
+                <input type="text" id="tel-bookkeeping">
+              </div>
+              <div class="half">
+                <label for="fax">
+                  <span>Факс</span>
+                  <abbr title=""></abbr>
+                </label>
+                <input type="text" id="fax">
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+
+
+      <div class="modal__form__help">
+        <h2>Види допомоги</h2>
+        <span class="choose-help">Ви можете змінити вид допомоги</span>
+
+        <div class="kind">
+          {% for form in forms %}
+          <div class="kind__block">
+            <div class="kind__img">
+              <span class="{{form.icon}}"></span>
+            </div>
+            <span class="kind__text">{{form.kind}}</span>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="kind__financial">
+          <div class="kind__wrap">
+            <div class="method">
+              <span class="method__title">Спосіб оплати</span>
+              {% for method in methods %}
+              <a href="#" class="method__block">
+                <div class="method__icon">
+                  <span class="{{method.icon}}"></span>
+                </div>
+                <span>{{method.name}}</span>
+              </a>
+              {% endfor %}
+            </div>
+            <div class="data">
+              <span class="data__title">Введіть наступні данні</span>
+              <form class="data__card">
+                <div class="data__card__number">
+                  <label for="card-number">Номер карти</label>
+                  <input type="text" id="card-number">
+                  <input type="text">
+                  <input type="text">
+                  <input type="text">
+                </div>
+                <div class="data__card__date">
+                  <label for="expiration-date">Термін дії</label>
+                  <input type="text" id="expiration-date">
+                </div>
+                <div class="data__card__cvv">
+                  <label for="cvv">CVC/CVV</label>
+                  <input type="text" id="cvv">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <button class="bg-color">Допомогти</button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<!-- MODAL FORM ENDS -->
