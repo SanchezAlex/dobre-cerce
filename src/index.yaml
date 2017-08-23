@@ -3,3 +3,11 @@ ProjectTitle: dobre-cerce
 PageList:
 - file: _main.html
   ready: 90
+- file: _archive.html
+  ready: 90
+- file: _projects.html
+  ready: 90
+- file: _contacts.html
+  ready: 90
+- file: _urgent-help.html
+  ready: 90
