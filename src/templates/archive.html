@@ -75,62 +75,65 @@ projects: [
 
 {% block content %}
 
-{% include "partials/_header.html" %}
+<div id="barba-wrapper">
+  <div class="barba-container" data-namespace="projectspage">
 
-<!-- ARCHIVE STARTS -->
+  <!-- ARCHIVE STARTS -->
 
-<div class="projects" id="projects">
+  <div class="projects" id="projects">
 
-  <div class="projects__nav">
-    <ul class="projects__menu">
-      <li><a href="#war">Війна</a><span></span></li>
-      <li><a href="#ecology">Екологія</a><span></span></li>
-      <li><a href="#kids" class="prjct-active">Діти</a><span>120</span></li>
-      <li><a href="#education">Освіта</a><span></span></li>
-    </ul>
-  </div>
-
-  <div class="projects__container">
-    <div class="projects__kinds-help">
-      <p>Види допомоги <span class="icon-arrow-down"></span>
-      </p>
+    <div class="projects__nav">
+      <ul class="projects__menu">
+        <li><a href="#war">Війна</a><span></span></li>
+        <li><a href="#ecology">Екологія</a><span></span></li>
+        <li><a href="#kids" class="prjct-active">Діти</a><span>120</span></li>
+        <li><a href="#education">Освіта</a><span></span></li>
+      </ul>
     </div>
-    <div class="projects__content">
 
-      {% for project in projects %}
-
-      <div class="projects__block">
-        <div class="projects__block__image accordion hide">
-          <img src="{{project.img}}" alt="project cover">
-          <span class="bg-color {{project.special_css}}">{{project.special}}</span>
-        </div>
-        <div class="projects__block__main hide">
-          <div class="projects__block__text">
-            <span class="projects__block__time">{{project.date}}</span>
-            <h3 class="projects__block__title">{{project.title}}</h3>
-            <p class="projects__block__desc">{{project.desc}}</p>
-            <span class="projects__block__done">{{project.done}}</span>
-          </div>
-          <div class="projects__help-icons">
-            <a href="#"><span class="small-icon {{project.icon1}}"></span></a>
-            <a href="#"><span class="small-icon {{project.icon2}}"></span></a>
-            <a href="#"><span class="small-icon {{project.icon3}}"></span></a>
-            <a href="#"><span class="small-icon {{project.icon4}}"></span></a>
-          </div>
-        </div>
+    <div class="projects__container">
+      <div class="projects__kinds-help">
+        <p>Види допомоги <span class="icon-arrow-down"></span>
+        </p>
       </div>
+      <div class="projects__content">
 
-      {% endfor %}
+        {% for project in projects %}
 
+        <div class="projects__block">
+          <div class="projects__block__image accordion hide">
+            <img src="{{project.img}}" alt="project cover">
+            <span class="bg-color {{project.special_css}}">{{project.special}}</span>
+          </div>
+          <div class="projects__block__main hide">
+            <div class="projects__block__text">
+              <span class="projects__block__time">{{project.date}}</span>
+              <h3 class="projects__block__title">{{project.title}}</h3>
+              <p class="projects__block__desc">{{project.desc}}</p>
+              <span class="projects__block__done">{{project.done}}</span>
+            </div>
+            <div class="projects__help-icons">
+              <a href="#"><span class="small-icon {{project.icon1}}"></span></a>
+              <a href="#"><span class="small-icon {{project.icon2}}"></span></a>
+              <a href="#"><span class="small-icon {{project.icon3}}"></span></a>
+              <a href="#"><span class="small-icon {{project.icon4}}"></span></a>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+      </div>
     </div>
+
+    <div class="chat">
+      <a href="#chat"></a>
+    </div>
+
   </div>
 
-  <div class="chat">
-    <a href="#chat"></a>
-  </div>
+  <!-- ARCHIVE ENDS -->
 
+  </div>
 </div>
-
-<!-- ARCHIVE ENDS -->
-
 {% endblock %}

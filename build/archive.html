@@ -11,124 +11,128 @@
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
 
   <body>
-    <!-- BEGIN content -->
-    <div id="barba-wrapper">
-      <div class="barba-container out">
-        <!-- HEADER START -->
-        <div class="header" id="header">
-          <div class="header__wrap" id="header__wrap"> <a href="main.html" class="header__logo">
-      <span>
-        <svg class="icon-heart" viewBox="0 0 32 29.6">
-          <path fill="url(#gradient_heart)" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
-          <defs>
-            <linearGradient id="gradient_heart" gradientTransform="rotate(-25)">
-              <stop offset="0%" stop-color="#da3d61" />
-              <stop offset="50%" stop-color="#B55183" />
-              <stop offset="80%" stop-color="#9266a7" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </span>
-    </a>
-            <ul class="header__lang">
-              <li><a href="#uk" class="lang-active">укр</a></li>
-              <li><a href="#ru">рус</a></li>
-              <li><a href="#en">en</a></li>
-            </ul>
-            <ul class="header__menu">
-              <li><a href="projects.html">Проекти</a></li>
-              <li><a href="archive.html" class="nav-active">Архів</a></li>
-              <li><a href="contacts.html">Контакти</a></li>
-              <li><a href="urgent-help.html" class="bg-color">Термінова допомога</a></li>
-            </ul>
-            <div class="header__search"> <span class="header__search__icon" id="search__icon">
+    <!-- HEADER START -->
+    <header class="header">
+      <div class="header__main" id="header">
+        <div class="header__wrap" id="header__wrap"> <a href="main.html" class="header__logo">
+        <span>
+          <svg class="icon-heart" viewBox="0 0 32 29.6">
+            <path fill="url(#gradient_heart)" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+            <defs>
+              <linearGradient id="gradient_heart" gradientTransform="rotate(-25)">
+                <stop offset="0%" stop-color="#da3d61" />
+                <stop offset="50%" stop-color="#B55183" />
+                <stop offset="80%" stop-color="#9266a7" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+      </a>
+          <ul class="header__lang">
+            <li><a href="#uk" class="lang-active">укр</a></li>
+            <li><a href="#ru">рус</a></li>
+            <li><a href="#en">en</a></li>
+          </ul>
+          <ul class="header__menu">
+            <li><a href="projects.html">Проекти</a></li>
+            <li><a href="archive.html" class="nav-active">Архів</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+            <li><a href="urgent-help.html" class="bg-color">Термінова допомога</a></li>
+          </ul>
+          <div class="header__search"> <span class="header__search__icon" id="search__icon">
 
 <svg class="icon icon-search"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
 
-      </span> </div>
-            <div class="header__auth"> <a href="#login" class="header__auth__login">Вхід</a> <span>/</span> <a href="#registration" class="header__auth__reg">Зареєструватися</a> </div>
-          </div>
-          <div class="header__search__form" id="search__form">
-            <div class="header__search__mask"></div>
-            <form> <input class="header__search__input" placeholder="" type="text" name="search"> <span class="header__search__placeholder">Пошук</span> <button class="btn_close" id="search__close"></button> </form>
-          </div>
+        </span> </div>
+          <div class="header__auth"> <a href="#login" class="header__auth__login">Вхід</a> <span>/</span> <a href="#registration" class="header__auth__reg">Зареєструватися</a> </div>
         </div>
-        <!-- HEADER END-->
-        <!-- ARCHIVE STARTS -->
-        <div class="projects" id="projects">
-          <div class="projects__nav">
-            <ul class="projects__menu">
-              <li><a href="#war">Війна</a><span></span></li>
-              <li><a href="#ecology">Екологія</a><span></span></li>
-              <li><a href="#kids" class="prjct-active">Діти</a><span>120</span></li>
-              <li><a href="#education">Освіта</a><span></span></li>
-            </ul>
-          </div>
-          <div class="projects__container">
-            <div class="projects__kinds-help">
-              <p>Види допомоги <span class="icon-arrow-down"></span> </p>
-            </div>
-            <div class="projects__content">
-              <div class="projects__block">
-                <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
-                <div class="projects__block__main hide">
-                  <div class="projects__block__text"> <span class="projects__block__time">07.02.2017</span>
-                    <h3 class="projects__block__title">Організація поїздки сиріт до дитячого табору у Болгарії</h3>
-                    <p class="projects__block__desc">Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або
-                      ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.</p> <span class="projects__block__done">Допомогли: Імя Фамілія, ВАТ &quot;Фірма&quot;, Імя Фамілія 2, ВАТ &quot;Фірма2&quot;</span>                    </div>
-                  <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon icon-wallet-small"></span></a> <a href="#"><span class="small-icon icon-clothes-small"></span></a>                    </div>
-                </div>
-              </div>
-              <div class="projects__block">
-                <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
-                <div class="projects__block__main hide">
-                  <div class="projects__block__text"> <span class="projects__block__time">04.01.2017</span>
-                    <h3 class="projects__block__title">Секція з фуболу для дітей початкових класів</h3>
-                    <p class="projects__block__desc"></p> <span class="projects__block__done"></span> </div>
-                  <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon icon-wallet-small"></span></a> <a href="#"><span class="small-icon icon-clothes-small"></span></a>                    </div>
-                </div>
-              </div>
-              <div class="projects__block">
-                <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
-                <div class="projects__block__main hide">
-                  <div class="projects__block__text"> <span class="projects__block__time">03.01.2017</span>
-                    <h3 class="projects__block__title">Адаптація дітей із зони АТО</h3>
-                    <p class="projects__block__desc"></p> <span class="projects__block__done"></span> </div>
-                  <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon icon-clothes-small"></span></a> <a href="#"><span class="small-icon icon-wallet-small"></span></a> <a href="#"><span class="small-icon icon-heart-help-small"></span></a>                    </div>
-                </div>
-              </div>
-              <div class="projects__block">
-                <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
-                <div class="projects__block__main hide">
-                  <div class="projects__block__text"> <span class="projects__block__time">23.11.2016</span>
-                    <h3 class="projects__block__title">Необхідно купити ліки у дитячий будинок</h3>
-                    <p class="projects__block__desc"></p> <span class="projects__block__done"></span> </div>
-                  <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon icon-wallet-small"></span></a> <a href="#"><span class="small-icon icon-heart-help-small"></span></a>                    </div>
-                </div>
-              </div>
-              <div class="projects__block">
-                <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
-                <div class="projects__block__main hide">
-                  <div class="projects__block__text"> <span class="projects__block__time">20.07.2016</span>
-                    <h3 class="projects__block__title">Необхідно купити ліки у дитячий будинок</h3>
-                    <p class="projects__block__desc"></p> <span class="projects__block__done"></span> </div>
-                  <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> </div>
-                </div>
-              </div>
-              <div class="projects__block">
-                <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
-                <div class="projects__block__main hide">
-                  <div class="projects__block__text"> <span class="projects__block__time">05.04.2016</span>
-                    <h3 class="projects__block__title">Необхідно купити ліки у дитячий будинок</h3>
-                    <p class="projects__block__desc"></p> <span class="projects__block__done"></span> </div>
-                  <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="chat"> <a href="#chat"></a> </div>
+        <div class="header__search__form" id="search__form">
+          <div class="header__search__mask"></div>
+          <form> <input class="header__search__input" placeholder="" type="text" name="search"> <span class="header__search__placeholder">Пошук</span> <button class="btn_close" id="search__close"></button> </form>
         </div>
-        <!-- ARCHIVE ENDS -->
+      </div>
+    </header>
+    <!-- HEADER END-->
+    <!-- BEGIN content -->
+    <div class="out">
+      <div id="barba-wrapper">
+        <div class="barba-container" data-namespace="projectspage">
+          <!-- ARCHIVE STARTS -->
+          <div class="projects" id="projects">
+            <div class="projects__nav">
+              <ul class="projects__menu">
+                <li><a href="#war">Війна</a><span></span></li>
+                <li><a href="#ecology">Екологія</a><span></span></li>
+                <li><a href="#kids" class="prjct-active">Діти</a><span>120</span></li>
+                <li><a href="#education">Освіта</a><span></span></li>
+              </ul>
+            </div>
+            <div class="projects__container">
+              <div class="projects__kinds-help">
+                <p>Види допомоги <span class="icon-arrow-down"></span> </p>
+              </div>
+              <div class="projects__content">
+                <div class="projects__block">
+                  <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
+                  <div class="projects__block__main hide">
+                    <div class="projects__block__text"> <span class="projects__block__time">07.02.2017</span>
+                      <h3 class="projects__block__title">Організація поїздки сиріт до дитячого табору у Болгарії</h3>
+                      <p class="projects__block__desc">Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок
+                        або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.</p> <span class="projects__block__done">Допомогли: Імя Фамілія, ВАТ &quot;Фірма&quot;, Імя Фамілія 2, ВАТ &quot;Фірма2&quot;</span>                      </div>
+                    <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon icon-wallet-small"></span></a> <a href="#"><span class="small-icon icon-clothes-small"></span></a>                      </div>
+                  </div>
+                </div>
+                <div class="projects__block">
+                  <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
+                  <div class="projects__block__main hide">
+                    <div class="projects__block__text"> <span class="projects__block__time">04.01.2017</span>
+                      <h3 class="projects__block__title">Секція з фуболу для дітей початкових класів</h3>
+                      <p class="projects__block__desc"></p> <span class="projects__block__done"></span> </div>
+                    <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon icon-wallet-small"></span></a> <a href="#"><span class="small-icon icon-clothes-small"></span></a>                      </div>
+                  </div>
+                </div>
+                <div class="projects__block">
+                  <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
+                  <div class="projects__block__main hide">
+                    <div class="projects__block__text"> <span class="projects__block__time">03.01.2017</span>
+                      <h3 class="projects__block__title">Адаптація дітей із зони АТО</h3>
+                      <p class="projects__block__desc"></p> <span class="projects__block__done"></span> </div>
+                    <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon icon-clothes-small"></span></a> <a href="#"><span class="small-icon icon-wallet-small"></span></a> <a href="#"><span class="small-icon icon-heart-help-small"></span></a>                      </div>
+                  </div>
+                </div>
+                <div class="projects__block">
+                  <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
+                  <div class="projects__block__main hide">
+                    <div class="projects__block__text"> <span class="projects__block__time">23.11.2016</span>
+                      <h3 class="projects__block__title">Необхідно купити ліки у дитячий будинок</h3>
+                      <p class="projects__block__desc"></p> <span class="projects__block__done"></span> </div>
+                    <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon icon-wallet-small"></span></a> <a href="#"><span class="small-icon icon-heart-help-small"></span></a>                      </div>
+                  </div>
+                </div>
+                <div class="projects__block">
+                  <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
+                  <div class="projects__block__main hide">
+                    <div class="projects__block__text"> <span class="projects__block__time">20.07.2016</span>
+                      <h3 class="projects__block__title">Необхідно купити ліки у дитячий будинок</h3>
+                      <p class="projects__block__desc"></p> <span class="projects__block__done"></span> </div>
+                    <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> </div>
+                  </div>
+                </div>
+                <div class="projects__block">
+                  <div class="projects__block__image accordion hide"> <img src="img/kids-archive-1.jpg" alt="project cover"> <span class="bg-color "></span> </div>
+                  <div class="projects__block__main hide">
+                    <div class="projects__block__text"> <span class="projects__block__time">05.04.2016</span>
+                      <h3 class="projects__block__title">Необхідно купити ліки у дитячий будинок</h3>
+                      <p class="projects__block__desc"></p> <span class="projects__block__done"></span> </div>
+                    <div class="projects__help-icons"> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> <a href="#"><span class="small-icon "></span></a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat"> <a href="#chat"></a> </div>
+          </div>
+          <!-- ARCHIVE ENDS -->
+        </div>
       </div>
     </div>
     <!-- END content -->

@@ -43,133 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// MODAL HELP
-
-document.addEventListener('DOMContentLoaded', () => {
-
-  let intro = document.querySelector('#intro');
-  let header = document.querySelector('#header');
-  let modalHelp = document.getElementById('modal-help');
-  let openHelp = document.getElementById('help__btn');
-  let closeHelp = document.getElementsByClassName('close-help')[0];
-
-  openHelp.addEventListener('click', () => {
-    modalHelp.style.display = 'block';
-    header.classList.toggle('blur');
-    intro.classList.toggle('blur');
-  });
-
-  closeHelp.addEventListener('click', () => {
-    modalHelp.style.display = 'none';
-    header.classList.toggle('blur');
-    intro.classList.toggle('blur');
-  });
-
-  window.onclick = event => {
-    if (event.target === modalHelp) {
-      modalHelp.style.display = 'none';
-      header.classList.toggle('blur');
-      intro.classList.toggle('blur');
-    }
-  };
-
-  // MODAL FORM
-
-  let modalForm = document.getElementById('modal-form');
-
-  let openForm = document.getElementById('help-now');
-
-  let closeForm = document.getElementsByClassName('close-form')[0];
-
-  openForm.onclick = () => {
-    modalForm.style.display = 'block';
-    header.classList.toggle('blur');
-    intro.classList.toggle('blur');
-  };
-
-  closeForm.onclick = () => {
-    modalForm.style.display = 'none';
-    header.classList.toggle('blur');
-    intro.classList.toggle('blur');
-
-  };
-
-  window.onclick = event => {
-    if (event.target === modalForm) {
-      modalForm.style.display = 'none';
-      header.classList.toggle('blur');
-      intro.classList.toggle('blur');
-    }
-  };
-
-
-  let activityBtns = document.getElementsByClassName('btn-who');
-
-  let activitySwitch = document.getElementById('organization');
-
-  [].forEach.call(activityBtns, (btn) => {
-
-    btn.addEventListener('click', () => {
-      btn.parentElement.querySelector('.btn-who').classList.toggle('active-form');
-
-      if (btn.classList.contains('active-form')) {
-        btn.classList.remove('active-form');
-        activitySwitch.style.display = 'none';
-      } else {
-        btn.classList.add('active-form');
-        activitySwitch.style.display = 'block';
-      }
-
-    });
-
-  });
-
-});
-
-
-// PROJECTS NAVIGATION HIGHLIGHT
-document.addEventListener('DOMContentLoaded', () => {
-
-  let prjctMenu = document.querySelector('.projects__menu');
-
-  prjctMenu.addEventListener('click', e => {
-    if (e.target.tagName.toLowerCase() !== 'a') return;
-    [].forEach.call(prjctMenu.querySelectorAll('a'), item => {
-      item.classList.remove('prjct-active');
-    });
-
-    e.target.classList.add('prjct-active');
-
-  });
-
-});
-
-
-
-// ACCORDION BLOCKS
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  let acc = document.getElementsByClassName('accordion');
-
-  let i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function() {
-      this.classList.toggle('acc-active');
-      let hide = this.nextElementSibling;
-
-      if (hide.style.maxHeight) {
-        hide.style.maxHeight = null;
-      } else {
-        hide.style.maxHeight = hide.scrollHeight + 'px';
-      }
-    };
-  }
-
-});
-
-
 // BARBA CONFIG
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -213,6 +86,154 @@ document.addEventListener('DOMContentLoaded', function() {
   Barba.Pjax.getTransition = function() {
     return FadeTransition;
   };
+
+
+
+  let mainPage = Barba.BaseView.extend({
+    namespace: 'mainpage',
+    onEnter: function() {
+
+      // MODAL HELP
+
+      let intro = document.querySelector('#intro');
+      let header = document.querySelector('#header');
+      let modalHelp = document.getElementById('modal-help');
+      let openHelp = document.getElementById('help__btn');
+      let closeHelp = document.getElementsByClassName('close-help')[0];
+
+      openHelp.addEventListener('click', () => {
+        modalHelp.style.display = 'block';
+        header.classList.toggle('blur');
+        intro.classList.toggle('blur');
+      });
+
+      closeHelp.addEventListener('click', () => {
+        modalHelp.style.display = 'none';
+        header.classList.toggle('blur');
+        intro.classList.toggle('blur');
+      });
+
+      window.onclick = event => {
+        if (event.target === modalHelp) {
+          modalHelp.style.display = 'none';
+          header.classList.toggle('blur');
+          intro.classList.toggle('blur');
+        }
+      };
+
+      // MODAL FORM
+
+      let modalForm = document.getElementById('modal-form');
+
+      let openForm = document.getElementById('help-now');
+
+      let closeForm = document.getElementsByClassName('close-form')[0];
+
+      openForm.onclick = () => {
+        modalForm.style.display = 'block';
+        header.classList.toggle('blur');
+        intro.classList.toggle('blur');
+      };
+
+      closeForm.onclick = () => {
+        modalForm.style.display = 'none';
+        header.classList.toggle('blur');
+        intro.classList.toggle('blur');
+
+      };
+
+      window.onclick = event => {
+        if (event.target === modalForm) {
+          modalForm.style.display = 'none';
+          header.classList.toggle('blur');
+          intro.classList.toggle('blur');
+        }
+      };
+
+
+      let activityBtns = document.getElementsByClassName('btn-who');
+
+      let activitySwitch = document.getElementById('organization');
+
+      [].forEach.call(activityBtns, (btn) => {
+
+        btn.addEventListener('click', () => {
+          btn.parentElement.querySelector('button').classList.toggle('active-form');
+
+          if (btn.classList.contains('active-form')) {
+            btn.classList.remove('active-form');
+            activitySwitch.style.display = 'none';
+          } else {
+            btn.classList.add('active-form');
+            activitySwitch.style.display = 'block';
+          }
+
+        });
+
+      });
+
+    },
+    onEnterCompleted: function() {
+      // The Transition has just finished.
+    },
+    onLeave: function() {
+      // A new Transition toward a new page has just started.
+    },
+    onLeaveCompleted: function() {
+      // The Container has just been removed from the DOM.
+    }
+  });
+
+  let projectsPage = Barba.BaseView.extend({
+    namespace: 'projectspage',
+    onEnter: function() {
+
+      let acc = document.getElementsByClassName('accordion');
+
+      let i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+          this.classList.toggle('acc-active');
+          let hide = this.nextElementSibling;
+
+          if (hide.style.maxHeight) {
+            hide.style.maxHeight = null;
+          } else {
+            hide.style.maxHeight = hide.scrollHeight + 'px';
+          }
+        };
+      }
+
+      let prjctMenu = document.querySelector('.projects__menu');
+
+      prjctMenu.addEventListener('click', e => {
+        if (e.target.tagName.toLowerCase() !== 'a') return;
+        [].forEach.call(prjctMenu.querySelectorAll('a'), item => {
+          item.classList.remove('prjct-active');
+        });
+
+        e.target.classList.add('prjct-active');
+
+      });
+
+    }
+  });
+
+  let contactsPage = Barba.BaseView.extend({
+    namespace: 'contactspage',
+    onEnter: function() {
+
+    }
+
+  });
+
+  // Don't forget to init the view!
+  mainPage.init();
+  projectsPage.init();
+  contactsPage.init();
+
+  Barba.Pjax.start();
 
 
 });

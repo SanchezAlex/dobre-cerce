@@ -4500,121 +4500,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// MODAL HELP
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  var intro = document.querySelector('#intro');
-  var header = document.querySelector('#header');
-  var modalHelp = document.getElementById('modal-help');
-  var openHelp = document.getElementById('help__btn');
-  var closeHelp = document.getElementsByClassName('close-help')[0];
-
-  openHelp.addEventListener('click', function () {
-    modalHelp.style.display = 'block';
-    header.classList.toggle('blur');
-    intro.classList.toggle('blur');
-  });
-
-  closeHelp.addEventListener('click', function () {
-    modalHelp.style.display = 'none';
-    header.classList.toggle('blur');
-    intro.classList.toggle('blur');
-  });
-
-  window.onclick = function (event) {
-    if (event.target === modalHelp) {
-      modalHelp.style.display = 'none';
-      header.classList.toggle('blur');
-      intro.classList.toggle('blur');
-    }
-  };
-
-  // MODAL FORM
-
-  var modalForm = document.getElementById('modal-form');
-
-  var openForm = document.getElementById('help-now');
-
-  var closeForm = document.getElementsByClassName('close-form')[0];
-
-  openForm.onclick = function () {
-    modalForm.style.display = 'block';
-    header.classList.toggle('blur');
-    intro.classList.toggle('blur');
-  };
-
-  closeForm.onclick = function () {
-    modalForm.style.display = 'none';
-    header.classList.toggle('blur');
-    intro.classList.toggle('blur');
-  };
-
-  window.onclick = function (event) {
-    if (event.target === modalForm) {
-      modalForm.style.display = 'none';
-      header.classList.toggle('blur');
-      intro.classList.toggle('blur');
-    }
-  };
-
-  var activityBtns = document.getElementsByClassName('btn-who');
-
-  var activitySwitch = document.getElementById('organization');
-
-  [].forEach.call(activityBtns, function (btn) {
-
-    btn.addEventListener('click', function () {
-      btn.parentElement.querySelector('.btn-who').classList.toggle('active-form');
-
-      if (btn.classList.contains('active-form')) {
-        btn.classList.remove('active-form');
-        activitySwitch.style.display = 'none';
-      } else {
-        btn.classList.add('active-form');
-        activitySwitch.style.display = 'block';
-      }
-    });
-  });
-});
-
-// PROJECTS NAVIGATION HIGHLIGHT
-document.addEventListener('DOMContentLoaded', function () {
-
-  var prjctMenu = document.querySelector('.projects__menu');
-
-  prjctMenu.addEventListener('click', function (e) {
-    if (e.target.tagName.toLowerCase() !== 'a') return;
-    [].forEach.call(prjctMenu.querySelectorAll('a'), function (item) {
-      item.classList.remove('prjct-active');
-    });
-
-    e.target.classList.add('prjct-active');
-  });
-});
-
-// ACCORDION BLOCKS
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  var acc = document.getElementsByClassName('accordion');
-
-  var i = void 0;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function () {
-      this.classList.toggle('acc-active');
-      var hide = this.nextElementSibling;
-
-      if (hide.style.maxHeight) {
-        hide.style.maxHeight = null;
-      } else {
-        hide.style.maxHeight = hide.scrollHeight + 'px';
-      }
-    };
-  }
-});
-
 // BARBA CONFIG
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -4656,4 +4541,141 @@ document.addEventListener('DOMContentLoaded', function () {
   Barba.Pjax.getTransition = function () {
     return FadeTransition;
   };
+
+  var mainPage = Barba.BaseView.extend({
+    namespace: 'mainpage',
+    onEnter: function onEnter() {
+
+      // MODAL HELP
+
+      var intro = document.querySelector('#intro');
+      var header = document.querySelector('#header');
+      var modalHelp = document.getElementById('modal-help');
+      var openHelp = document.getElementById('help__btn');
+      var closeHelp = document.getElementsByClassName('close-help')[0];
+
+      openHelp.addEventListener('click', function () {
+        modalHelp.style.display = 'block';
+        header.classList.toggle('blur');
+        intro.classList.toggle('blur');
+      });
+
+      closeHelp.addEventListener('click', function () {
+        modalHelp.style.display = 'none';
+        header.classList.toggle('blur');
+        intro.classList.toggle('blur');
+      });
+
+      window.onclick = function (event) {
+        if (event.target === modalHelp) {
+          modalHelp.style.display = 'none';
+          header.classList.toggle('blur');
+          intro.classList.toggle('blur');
+        }
+      };
+
+      // MODAL FORM
+
+      var modalForm = document.getElementById('modal-form');
+
+      var openForm = document.getElementById('help-now');
+
+      var closeForm = document.getElementsByClassName('close-form')[0];
+
+      openForm.onclick = function () {
+        modalForm.style.display = 'block';
+        header.classList.toggle('blur');
+        intro.classList.toggle('blur');
+      };
+
+      closeForm.onclick = function () {
+        modalForm.style.display = 'none';
+        header.classList.toggle('blur');
+        intro.classList.toggle('blur');
+      };
+
+      window.onclick = function (event) {
+        if (event.target === modalForm) {
+          modalForm.style.display = 'none';
+          header.classList.toggle('blur');
+          intro.classList.toggle('blur');
+        }
+      };
+
+      var activityBtns = document.getElementsByClassName('btn-who');
+
+      var activitySwitch = document.getElementById('organization');
+
+      [].forEach.call(activityBtns, function (btn) {
+
+        btn.addEventListener('click', function () {
+          btn.parentElement.querySelector('button').classList.toggle('active-form');
+
+          if (btn.classList.contains('active-form')) {
+            btn.classList.remove('active-form');
+            activitySwitch.style.display = 'none';
+          } else {
+            btn.classList.add('active-form');
+            activitySwitch.style.display = 'block';
+          }
+        });
+      });
+    },
+    onEnterCompleted: function onEnterCompleted() {
+      // The Transition has just finished.
+    },
+    onLeave: function onLeave() {
+      // A new Transition toward a new page has just started.
+    },
+    onLeaveCompleted: function onLeaveCompleted() {
+      // The Container has just been removed from the DOM.
+    }
+  });
+
+  var projectsPage = Barba.BaseView.extend({
+    namespace: 'projectspage',
+    onEnter: function onEnter() {
+
+      var acc = document.getElementsByClassName('accordion');
+
+      var i = void 0;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function () {
+          this.classList.toggle('acc-active');
+          var hide = this.nextElementSibling;
+
+          if (hide.style.maxHeight) {
+            hide.style.maxHeight = null;
+          } else {
+            hide.style.maxHeight = hide.scrollHeight + 'px';
+          }
+        };
+      }
+
+      var prjctMenu = document.querySelector('.projects__menu');
+
+      prjctMenu.addEventListener('click', function (e) {
+        if (e.target.tagName.toLowerCase() !== 'a') return;
+        [].forEach.call(prjctMenu.querySelectorAll('a'), function (item) {
+          item.classList.remove('prjct-active');
+        });
+
+        e.target.classList.add('prjct-active');
+      });
+    }
+  });
+
+  var contactsPage = Barba.BaseView.extend({
+    namespace: 'contactspage',
+    onEnter: function onEnter() {}
+
+  });
+
+  // Don't forget to init the view!
+  mainPage.init();
+  projectsPage.init();
+  contactsPage.init();
+
+  Barba.Pjax.start();
 });

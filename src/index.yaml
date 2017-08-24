@@ -1,13 +1,13 @@
 ProjectTitle: dobre-cerce
 
 PageList:
-- file: _main.html
+- file: main.html
   ready: 90
-- file: _archive.html
+- file: archive.html
   ready: 90
-- file: _projects.html
+- file: projects.html
   ready: 90
-- file: _contacts.html
+- file: contacts.html
   ready: 90
-- file: _urgent-help.html
+- file: urgent-help.html
   ready: 90

@@ -1,0 +1,129 @@
+---
+title: Добре Серце | Невідкладна допомога
+
+projects: [
+  {
+    img: 'img/kids-urgent-1.jpg',
+    date: '04.05.2017',
+    title: 'Операція дитині, яка постраждала в зоні АТО',
+    desc: 'Необхідно терміново зробити операцію або зібрати 40 000 грн Василю, який був поранений в зоні АТО',
+    done: 'Зібрано 18 000 з 40 0000 UAH',
+    icon1: '',
+    icon2: '',
+    icon3: 'icon-hand-small2',
+    icon4: 'icon-wallet-small2'
+  },
+  {
+    img: 'img/kids-urgent-1.jpg',
+    date: '04.05.2017',
+    title: 'Ремонт опалення у дитячому будинку',
+    desc: '',
+    done: '',
+    icon1: '',
+    icon2: '',
+    icon3: '',
+    icon4: ''
+  },
+  {
+    img: 'img/kids-urgent-1.jpg',
+    date: '03.05.2017',
+    title: 'Терміново необхідно закупити до лікарень дитячий "рідкісний препарат" від укусів кліщів',
+    desc: '',
+    done: '',
+    icon1: '',
+    icon2: '',
+    icon3: '',
+    icon4: ''
+  },
+  {
+    img: 'img/kids-urgent-1.jpg',
+    date: '02.04.2017',
+    title: 'Необхідно купити ліки у дитячий будинок',
+    desc: '',
+    done: '',
+    icon1: '',
+    icon2: '',
+    icon3: '',
+    icon4: ''
+  },
+  {
+    img: 'img/kids-urgent-1.jpg',
+    date: '23.01.2017',
+    title: 'Необхідно купити ліки у дитячий будинок',
+    desc: '',
+    done: '',
+    icon1: '',
+    icon2: '',
+    icon3: '',
+    icon4: ''
+  }
+]
+---
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div id="barba-wrapper">
+  <div class="barba-container" data-namespace="projectspage">
+
+
+  <!-- URGENT HELP STARTS -->
+
+  <div class="projects" id="projects">
+
+    <div class="projects__nav">
+      <ul class="projects__menu">
+        <li><a href="#war">Війна</a><span></span></li>
+        <li><a href="#ecology">Екологія</a><span></span></li>
+        <li><a href="#kids" class="prjct-active">Діти</a><span>3</span></li>
+        <li><a href="#education">Освіта</a><span></span></li>
+      </ul>
+    </div>
+
+    <div class="projects__container">
+      <div class="projects__kinds-help">
+        <p>Види допомоги <span class="icon-arrow-down-grey"></span>
+        </p>
+      </div>
+      <div class="projects__content">
+
+        {% for project in projects %}
+
+        <div class="projects__block">
+          <div class="projects__block__image accordion hide">
+            <img src="{{project.img}}" alt="project cover">
+            <span class="bg-color {{project.special_css}}">{{project.special}}</span>
+          </div>
+          <div class="projects__block__main hide">
+            <div class="projects__block__text">
+              <span class="projects__block__time">{{project.date}}</span>
+              <h3 class="projects__block__title">{{project.title}}</h3>
+              <p class="projects__block__desc">{{project.desc}}</p>
+              <span class="projects__block__done">{{project.done}}</span>
+            </div>
+            <div class="projects__help-icons">
+              <a href="#"><span class="small-icon {{project.icon1}}"></span></a>
+              <a href="#"><span class="small-icon {{project.icon2}}"></span></a>
+              <a href="#"><span class="small-icon {{project.icon3}}"></span></a>
+              <a href="#"><span class="small-icon {{project.icon4}}"></span></a>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+      </div>
+    </div>
+
+    <div class="chat">
+      <a href="#chat"></a>
+    </div>
+
+  </div>
+
+  <!-- URGENT HELP ENDS -->
+
+  </div>
+</div>
+{% endblock %}

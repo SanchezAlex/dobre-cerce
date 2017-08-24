@@ -11,309 +11,313 @@
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
 
   <body>
-    <!-- BEGIN content -->
-    <div id="barba-wrapper">
-      <div class="barba-container out">
-        <!-- HEADER START -->
-        <div class="header" id="header">
-          <div class="header__wrap" id="header__wrap"> <a href="main.html" class="header__logo">
-      <span>
-        <svg class="icon-heart" viewBox="0 0 32 29.6">
-          <path fill="url(#gradient_heart)" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
-          <defs>
-            <linearGradient id="gradient_heart" gradientTransform="rotate(-25)">
-              <stop offset="0%" stop-color="#da3d61" />
-              <stop offset="50%" stop-color="#B55183" />
-              <stop offset="80%" stop-color="#9266a7" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </span>
-    </a>
-            <ul class="header__lang">
-              <li><a href="#uk" class="lang-active">укр</a></li>
-              <li><a href="#ru">рус</a></li>
-              <li><a href="#en">en</a></li>
-            </ul>
-            <ul class="header__menu">
-              <li><a href="projects.html">Проекти</a></li>
-              <li><a href="archive.html">Архів</a></li>
-              <li><a href="contacts.html">Контакти</a></li>
-              <li><a href="urgent-help.html" class="bg-color">Термінова допомога</a></li>
-            </ul>
-            <div class="header__search"> <span class="header__search__icon" id="search__icon">
-        
+    <!-- HEADER START -->
+    <header class="header">
+      <div class="header__main" id="header">
+        <div class="header__wrap" id="header__wrap"> <a href="main.html" class="header__logo">
+        <span>
+          <svg class="icon-heart" viewBox="0 0 32 29.6">
+            <path fill="url(#gradient_heart)" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+            <defs>
+              <linearGradient id="gradient_heart" gradientTransform="rotate(-25)">
+                <stop offset="0%" stop-color="#da3d61" />
+                <stop offset="50%" stop-color="#B55183" />
+                <stop offset="80%" stop-color="#9266a7" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+      </a>
+          <ul class="header__lang">
+            <li><a href="#uk" class="lang-active">укр</a></li>
+            <li><a href="#ru">рус</a></li>
+            <li><a href="#en">en</a></li>
+          </ul>
+          <ul class="header__menu">
+            <li><a href="projects.html">Проекти</a></li>
+            <li><a href="archive.html">Архів</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+            <li><a href="urgent-help.html" class="bg-color">Термінова допомога</a></li>
+          </ul>
+          <div class="header__search"> <span class="header__search__icon" id="search__icon">
+          
 <svg class="icon icon-search"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
 
-      </span> </div>
-            <div class="header__auth"> <a href="#login" class="header__auth__login">Вхід</a> <span>/</span> <a href="#registration" class="header__auth__reg">Зареєструватися</a> </div>
-          </div>
-          <div class="header__search__form" id="search__form">
-            <div class="header__search__mask"></div>
-            <form> <input class="header__search__input" placeholder="" type="text" name="search"> <span class="header__search__placeholder">Пошук</span> <button class="btn_close" id="search__close"></button> </form>
-          </div>
+        </span> </div>
+          <div class="header__auth"> <a href="#login" class="header__auth__login">Вхід</a> <span>/</span> <a href="#registration" class="header__auth__reg">Зареєструватися</a> </div>
         </div>
-        <!-- HEADER END-->
-        <!-- INTRO STARTS -->
-        <div class="intro" id="intro">
-          <div class="intro__container">
-            <div class="intro__main">
-              <h1>Добре Серце</h1> <a href="#about-project">детальніше про проект
-        <span>
-          <svg viewBox="0 0 48 48">
-            <path fill="url(#gradient_arrow)" d="M24,46C11.9,46,2,36.1,2,24S11.9,2,24,2s22,9.9,22,22S36.1,46,24,46z M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20   S35,4,24,4z"/>
-            <polygon fill="url(#gradient_arrow)" points="21.4,36.7 19.9,35.3 31.2,24 19.9,12.7 21.4,11.3 34.1,24" />
-            <defs>
-              <linearGradient id="gradient_arrow" gradientTransform="rotate(-25)">
-                <stop offset="0%" stop-color="#da3d61" />
-                <stop offset="50%" stop-color="#B55183" />
-                <stop offset="80%" stop-color="#9266a7" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </span>
-      </a> </div>
-            <div class="intro__block">
-              <p>Вже зараз Ви можете допомогти тим, хто дійсно <br> потребує допомоги</p> <a href="#help-project" id="help__btn">Як Ви можете допомогти?
-        <span>
-          <svg viewBox="0 0 48 48">
-            <path fill="url(#gradient_arrow)" d="M24,46C11.9,46,2,36.1,2,24S11.9,2,24,2s22,9.9,22,22S36.1,46,24,46z M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20   S35,4,24,4z"/>
-            <polygon fill="url(#gradient_arrow)" points="21.4,36.7 19.9,35.3 31.2,24 19.9,12.7 21.4,11.3 34.1,24" />
-            <defs>
-              <linearGradient id="gradient_arrow" gradientTransform="rotate(-25)">
-                <stop offset="0%" stop-color="#da3d61" />
-                <stop offset="50%" stop-color="#B55183" />
-                <stop offset="80%" stop-color="#9266a7" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </span>
-      </a> <button id="help-now">Допомогти вже зараз</button> </div>
-            <div class="intro__block">
-              <p>Якщо Вам потрібна допомога, додайте проект</p> <a href="#add-project">Додати проект
-        <span>
-          <svg viewBox="0 0 512 512">
-            <path fill="url(#gradient_plus)" d="M256.108,3.02c-139.743,0-253,113.257-253,253s113.257,252.995,253,252.995   c139.743,0,253-113.252,253-252.995S395.852,3.02,256.108,3.02z M256.108,488.775c-128.338,0-232.76-104.417-232.76-232.755   c0-128.339,104.422-232.76,232.76-232.76c128.338,0,232.76,104.421,232.76,232.76C488.868,384.358,384.446,488.775,256.108,488.775   z" fill="#37404D"/>
-            <polygon fill="url(#gradient_plus)" points="266.228,104.22 245.988,104.22 245.988,245.9 104.98,245.9 104.98,266.14 245.988,266.14    245.988,407.148 266.228,407.148 266.228,266.14 407.908,266.14 407.908,245.9 266.228,245.9  "/>
-            <defs>
-              <linearGradient id="gradient_plus" gradientTransform="rotate(-25)">
-                <stop offset="0%" stop-color="#da3d61" />
-                <stop offset="50%" stop-color="#B55183" />
-                <stop offset="80%" stop-color="#9266a7" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </span>
-      </a> </div>
-            <div class="intro__footer"> <span>Розповісти всім:</span> <a href="#twitter">
-        
+        <div class="header__search__form" id="search__form">
+          <div class="header__search__mask"></div>
+          <form> <input class="header__search__input" placeholder="" type="text" name="search"> <span class="header__search__placeholder">Пошук</span> <button class="btn_close" id="search__close"></button> </form>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END-->
+    <!-- BEGIN content -->
+    <div class="out">
+      <div id="barba-wrapper">
+        <div class="barba-container" data-namespace="mainpage">
+          <!-- INTRO STARTS -->
+          <div class="intro" id="intro">
+            <div class="intro__container">
+              <div class="intro__main">
+                <h1>Добре Серце</h1> <a href="#about-project">детальніше про проект
+            <span>
+              <svg viewBox="0 0 48 48">
+                <path fill="url(#gradient_arrow)" d="M24,46C11.9,46,2,36.1,2,24S11.9,2,24,2s22,9.9,22,22S36.1,46,24,46z M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20   S35,4,24,4z"/>
+                <polygon fill="url(#gradient_arrow)" points="21.4,36.7 19.9,35.3 31.2,24 19.9,12.7 21.4,11.3 34.1,24" />
+                <defs>
+                  <linearGradient id="gradient_arrow" gradientTransform="rotate(-25)">
+                    <stop offset="0%" stop-color="#da3d61" />
+                    <stop offset="50%" stop-color="#B55183" />
+                    <stop offset="80%" stop-color="#9266a7" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+          </a> </div>
+              <div class="intro__block">
+                <p>Вже зараз Ви можете допомогти тим, хто дійсно <br> потребує допомоги</p> <a href="#help-project" id="help__btn">Як Ви можете допомогти?
+            <span>
+              <svg viewBox="0 0 48 48">
+                <path fill="url(#gradient_arrow)" d="M24,46C11.9,46,2,36.1,2,24S11.9,2,24,2s22,9.9,22,22S36.1,46,24,46z M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20   S35,4,24,4z"/>
+                <polygon fill="url(#gradient_arrow)" points="21.4,36.7 19.9,35.3 31.2,24 19.9,12.7 21.4,11.3 34.1,24" />
+                <defs>
+                  <linearGradient id="gradient_arrow" gradientTransform="rotate(-25)">
+                    <stop offset="0%" stop-color="#da3d61" />
+                    <stop offset="50%" stop-color="#B55183" />
+                    <stop offset="80%" stop-color="#9266a7" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+          </a> <button id="help-now">Допомогти вже зараз</button> </div>
+              <div class="intro__block">
+                <p>Якщо Вам потрібна допомога, додайте проект</p> <a href="#add-project">Додати проект
+            <span>
+              <svg viewBox="0 0 512 512">
+                <path fill="url(#gradient_plus)" d="M256.108,3.02c-139.743,0-253,113.257-253,253s113.257,252.995,253,252.995   c139.743,0,253-113.252,253-252.995S395.852,3.02,256.108,3.02z M256.108,488.775c-128.338,0-232.76-104.417-232.76-232.755   c0-128.339,104.422-232.76,232.76-232.76c128.338,0,232.76,104.421,232.76,232.76C488.868,384.358,384.446,488.775,256.108,488.775   z" fill="#37404D"/>
+                <polygon fill="url(#gradient_plus)" points="266.228,104.22 245.988,104.22 245.988,245.9 104.98,245.9 104.98,266.14 245.988,266.14    245.988,407.148 266.228,407.148 266.228,266.14 407.908,266.14 407.908,245.9 266.228,245.9  "/>
+                <defs>
+                  <linearGradient id="gradient_plus" gradientTransform="rotate(-25)">
+                    <stop offset="0%" stop-color="#da3d61" />
+                    <stop offset="50%" stop-color="#B55183" />
+                    <stop offset="80%" stop-color="#9266a7" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+          </a> </div>
+              <div class="intro__footer"> <span>Розповісти всім:</span> <a href="#twitter">
+            
 <svg class="icon icon-twitter"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
 
-      </a> <a href="#facebook">
-        
+          </a> <a href="#facebook">
+            
 <svg class="icon icon-facebook"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
 
-      </a> <a href="#vk">
-        
+          </a> <a href="#vk">
+            
 <svg class="icon icon-vk"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
 
-      </a> </div>
+          </a> </div>
+            </div>
+            <div class="intro__angle">
+              <div class="intro__angle__img"> <img src="img/intro-angle.png" alt="heart agle image"> </div>
+            </div>
+            <div class="chat"> <a href="#chat"></a> </div>
           </div>
-          <div class="intro__angle">
-            <div class="intro__angle__img"> <img src="img/intro-angle.png" alt="heart agle image"> </div>
-          </div>
-          <div class="chat"> <a href="#chat"></a> </div>
-        </div>
-        <!-- INTRO ENDS -->
-        <!-- MODAL HELP STARTS -->
-        <div id="modal-help" class="modal">
-          <div class="modal__help"> <span class="btn_close close-help"></span>
-            <h2>Види допомоги</h2>
-            <div class="modal__help__wrap">
-              <div class="modal__help__block">
-                <div class="modal__help__image"> <span class="icon-hand"></span> </div>
-                <div class="modal__help__kind"> <span>Зробити</span> </div>
-                <div class="modal__help__desc">
-                  <p>Натискайте цю кнопку, якщо Ви хочете зробити, наприклад ремонт у дитячому будинку, складну операцію, побудувати дитячий майданчик абопобудувати житло для переселенців і т.д. <br> <br> Ця кнопка, для організацій, які можуть взяти на себе
-                    відповідальність за увесь проект. </p>
+          <!-- INTRO ENDS -->
+          <!-- MODAL HELP STARTS -->
+          <div id="modal-help" class="modal">
+            <div class="modal__help"> <span class="btn_close close-help"></span>
+              <h2>Види допомоги</h2>
+              <div class="modal__help__wrap">
+                <div class="modal__help__block">
+                  <div class="modal__help__image"> <span class="icon-hand"></span> </div>
+                  <div class="modal__help__kind"> <span>Зробити</span> </div>
+                  <div class="modal__help__desc">
+                    <p>Натискайте цю кнопку, якщо Ви хочете зробити, наприклад ремонт у дитячому будинку, складну операцію, побудувати дитячий майданчик абопобудувати житло для переселенців і т.д. <br> <br> Ця кнопка, для організацій, які можуть взяти на
+                      себе відповідальність за увесь проект. </p>
+                  </div>
                 </div>
-              </div>
-              <div class="modal__help__block">
-                <div class="modal__help__image"> <span class="icon-wallet"></span> </div>
-                <div class="modal__help__kind"> <span>Фінансова допомога</span> </div>
-                <div class="modal__help__desc">
-                  <p>Перераховуйте гроші тим, хто дійсно потребує цього. <br> <br> </p>
+                <div class="modal__help__block">
+                  <div class="modal__help__image"> <span class="icon-wallet"></span> </div>
+                  <div class="modal__help__kind"> <span>Фінансова допомога</span> </div>
+                  <div class="modal__help__desc">
+                    <p>Перераховуйте гроші тим, хто дійсно потребує цього. <br> <br> </p>
+                  </div>
                 </div>
-              </div>
-              <div class="modal__help__block">
-                <div class="modal__help__image"> <span class="icon-clothes"></span> </div>
-                <div class="modal__help__kind"> <span>Матеріальна допомога</span> </div>
-                <div class="modal__help__desc">
-                  <p>Зберіть ліки, речі, їжу, іграшки та інше, для тих, кому це необхідно. <br> <br> </p>
+                <div class="modal__help__block">
+                  <div class="modal__help__image"> <span class="icon-clothes"></span> </div>
+                  <div class="modal__help__kind"> <span>Матеріальна допомога</span> </div>
+                  <div class="modal__help__desc">
+                    <p>Зберіть ліки, речі, їжу, іграшки та інше, для тих, кому це необхідно. <br> <br> </p>
+                  </div>
                 </div>
-              </div>
-              <div class="modal__help__block">
-                <div class="modal__help__image"> <span class="icon-heart-help"></span> </div>
-                <div class="modal__help__kind"> <span>Волонтерство</span> </div>
-                <div class="modal__help__desc">
-                  <p>Допоможіть ділом або професійними навичками. Підтримайте проекти своєю роботою. <br> <br> </p>
+                <div class="modal__help__block">
+                  <div class="modal__help__image"> <span class="icon-heart-help"></span> </div>
+                  <div class="modal__help__kind"> <span>Волонтерство</span> </div>
+                  <div class="modal__help__desc">
+                    <p>Допоможіть ділом або професійними навичками. Підтримайте проекти своєю роботою. <br> <br> </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- MODAL HELP ENDS -->
-        <!-- MODAL FORM STARTS -->
-        <div id="modal-form" class="modal">
-          <div class="modal__form"> <span class="btn_close close-form"></span>
-            <div class="modal__form__wrap">
-              <div class="modal__form__data">
-                <h2>Заповніть форму</h2>
-                <div class="modal__form__activity"> <button id="individual" class="btn-who active-form">Фіз. особа</button> <button id="legal" class="btn-who">Юр. особа</button> </div>
-                <form class="personal">
-                  <div class="flex-block">
-                    <div class="half"> <label for="name">
+          <!-- MODAL HELP ENDS -->
+          <!-- MODAL FORM STARTS -->
+          <div id="modal-form" class="modal">
+            <div class="modal__form"> <span class="btn_close close-form"></span>
+              <div class="modal__form__wrap">
+                <div class="modal__form__data">
+                  <h2>Заповніть форму</h2>
+                  <div class="modal__form__activity"> <button id="individual" class="btn-who active-form">Фіз. особа</button> <button id="legal" class="btn-who">Юр. особа</button> </div>
+                  <form class="personal">
+                    <div class="flex-block">
+                      <div class="half"> <label for="name">
                 <span>Ім'я</span>
                 <abbr title=""></abbr>
               </label> <input type="text" id="name"> </div>
-                    <div class="half"> <label for="last-name">
+                      <div class="half"> <label for="last-name">
                 <span>Фамілія</span>
                 <abbr title=""></abbr>
               </label> <input type="text" id="last-name"> </div>
-                  </div>
-                  <div class="full"> <label for="company">
+                    </div>
+                    <div class="full"> <label for="company">
               <span>Назва компанії, організації</span>
               <abbr title=""></abbr>
             </label> <input type="text" id="company"> <button class="add-logo">+ Логотип</button> </div>
-                  <div class="full"> <label for="email">
+                    <div class="full"> <label for="email">
               <span>Email-адрес</span>
               <abbr title=""></abbr>
             </label> <input type="email" id="email"> </div>
-                  <div class="full"> <label for="phone">
+                    <div class="full"> <label for="phone">
               <span>Номер телефону</span>
               <abbr title=""></abbr>
             </label> <input type="tel" id="phone"> </div>
-                </form>
-                <form class="location">
-                  <div class="full"> <label for="country">
+                  </form>
+                  <form class="location">
+                    <div class="full"> <label for="country">
               <span>Країна</span>
               <abbr title=""></abbr>
             </label> <input type="text" id="country"> </div>
-                  <div class="flex-block">
-                    <div class="half"> <label for="town">
+                    <div class="flex-block">
+                      <div class="half"> <label for="town">
                 <span>Місто</span>
                 <abbr title=""></abbr>
               </label> <input type="text" id="town"> </div>
-                    <div class="half"> <label for="region">
+                      <div class="half"> <label for="region">
                 <span>Штат, район</span>
                 <abbr title=""></abbr>
               </label> <input type="text" id="region"> </div>
-                  </div>
-                  <div class="full"> <label for="address">
+                    </div>
+                    <div class="full"> <label for="address">
               <span>Адреса</span>
               <abbr title=""></abbr>
             </label> <input type="text" id="address"> </div>
-                  <div class="full">
-                    <div class="half"> <label for="post-index">
+                    <div class="full">
+                      <div class="half"> <label for="post-index">
                 <span>Поштовий індекс</span>
                 <abbr title=""></abbr>
               </label> <input type="number" id="post-index"> </div>
-                  </div>
-                </form>
-                <div class="organization" id="organization">
-                  <form class="bank-details">
-                    <div class="full"> <label for="legal-address">
+                    </div>
+                  </form>
+                  <div class="organization" id="organization">
+                    <form class="bank-details">
+                      <div class="full"> <label for="legal-address">
                 <span>Юридична адреса</span>
                 <abbr title=""></abbr>
               </label> <input type="text" id="legal-address"> </div>
-                    <div class="flex-block">
-                      <div class="half"> <label for="bank-name">
+                      <div class="flex-block">
+                        <div class="half"> <label for="bank-name">
                   <span>Найменування банку</span>
                   <abbr title=""></abbr>
                 </label> <input type="text" id="bank-name"> </div>
-                      <div class="half"> <label for="bank-code">
+                        <div class="half"> <label for="bank-code">
                   <span>МФО банку</span>
                   <abbr title=""></abbr>
                 </label> <input type="text" id="bank-code"> </div>
-                    </div>
-                    <div class="full"> <label for="bank-account">
+                      </div>
+                      <div class="full"> <label for="bank-account">
                 <span>Розрахунковий рахунок</span>
                 <abbr title=""></abbr>
               </label> <input type="text" id="bank-account"> </div>
-                  </form>
-                  <form class="tax-details">
-                    <div class="flex-block">
-                      <div class="half"> <label for="zkpo">
+                    </form>
+                    <form class="tax-details">
+                      <div class="flex-block">
+                        <div class="half"> <label for="zkpo">
                   <span>ЗКПО</span>
                   <abbr title=""></abbr>
                 </label> <input type="text" id="zkpo"> </div>
-                      <div class="half"> <label for="tax-type">
+                        <div class="half"> <label for="tax-type">
                   <span>Тип оподаткування</span>
                   <abbr title=""></abbr>
                 </label> <input type="text" id="tax-type"> </div>
-                    </div>
-                    <div class="flex-block">
-                      <div class="half"> <label for="inn">
+                      </div>
+                      <div class="flex-block">
+                        <div class="half"> <label for="inn">
                   <span>ІНН</span>
                   <abbr title=""></abbr>
                 </label> <input type="text" id="inn"> </div>
-                      <div class="half"> <label for="tax-system">
+                        <div class="half"> <label for="tax-system">
                   <span>Система оподаткування</span>
                   <abbr title=""></abbr>
                 </label> <input type="text" id="tax-system"> </div>
-                    </div>
-                    <div class="flex-block">
-                      <div class="half"> <label for="tel-bookkeeping">
+                      </div>
+                      <div class="flex-block">
+                        <div class="half"> <label for="tel-bookkeeping">
                   <span>Телефон бухгалтерії</span>
                   <abbr title=""></abbr>
                 </label> <input type="text" id="tel-bookkeeping"> </div>
-                      <div class="half"> <label for="fax">
+                        <div class="half"> <label for="fax">
                   <span>Факс</span>
                   <abbr title=""></abbr>
                 </label> <input type="text" id="fax"> </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="modal__form__help">
-                <h2>Види допомоги</h2> <span class="choose-help">Ви можете змінити вид допомоги</span>
-                <div class="kind">
-                  <div class="kind__block">
-                    <div class="kind__img"> <span class="icon-hand"></span> </div> <span class="kind__text">Зробити</span> </div>
-                  <div class="kind__block">
-                    <div class="kind__img"> <span class="icon-wallet"></span> </div> <span class="kind__text">Фінансова допомога</span> </div>
-                  <div class="kind__block">
-                    <div class="kind__img"> <span class="icon-clothes"></span> </div> <span class="kind__text">Матеріальна допомога</span> </div>
-                  <div class="kind__block">
-                    <div class="kind__img"> <span class="icon-heart-help"></span> </div> <span class="kind__text">Волонтерство</span> </div>
-                </div>
-                <div class="kind__financial">
-                  <div class="kind__wrap">
-                    <div class="method"> <span class="method__title">Спосіб оплати</span>
-                      <a href="#" class="method__block">
-                        <div class="method__icon"> <span class="icon-visa"></span> </div> <span>Картка Visa/MasterCard</span> </a>
-                      <a href="#" class="method__block">
-                        <div class="method__icon"> <span class="icon-privat24"></span> </div> <span>Приват 24</span> </a>
-                      <a href="#" class="method__block">
-                        <div class="method__icon"> <span class="icon-terminals"></span> </div> <span>Термінали України</span> </a>
-                      <a href="#" class="method__block">
-                        <div class="method__icon"> <span class="icon-webmoney"></span> </div> <span>Webmoney</span> </a>
-                      <a href="#" class="method__block">
-                        <div class="method__icon"> <span class="icon-paypal"></span> </div> <span>PayPal</span> </a>
-                    </div>
-                    <div class="data"> <span class="data__title">Введіть наступні данні</span>
-                      <form class="data__card">
-                        <div class="data__card__number"> <label for="card-number">Номер карти</label> <input type="text" id="card-number"> <input type="text"> <input type="text"> <input type="text"> </div>
-                        <div class="data__card__date"> <label for="expiration-date">Термін дії</label> <input type="text" id="expiration-date"> </div>
-                        <div class="data__card__cvv"> <label for="cvv">CVC/CVV</label> <input type="text" id="cvv"> </div>
-                      </form>
-                    </div>
+                      </div>
+                    </form>
                   </div>
-                </div> <button class="bg-color">Допомогти</button> </div>
+                </div>
+                <div class="modal__form__help">
+                  <h2>Види допомоги</h2> <span class="choose-help">Ви можете змінити вид допомоги</span>
+                  <div class="kind">
+                    <div class="kind__block">
+                      <div class="kind__img"> <span class="icon-hand"></span> </div> <span class="kind__text">Зробити</span> </div>
+                    <div class="kind__block">
+                      <div class="kind__img"> <span class="icon-wallet"></span> </div> <span class="kind__text">Фінансова допомога</span> </div>
+                    <div class="kind__block">
+                      <div class="kind__img"> <span class="icon-clothes"></span> </div> <span class="kind__text">Матеріальна допомога</span> </div>
+                    <div class="kind__block">
+                      <div class="kind__img"> <span class="icon-heart-help"></span> </div> <span class="kind__text">Волонтерство</span> </div>
+                  </div>
+                  <div class="kind__financial">
+                    <div class="kind__wrap">
+                      <div class="method"> <span class="method__title">Спосіб оплати</span>
+                        <a href="#" class="method__block">
+                          <div class="method__icon"> <span class="icon-visa"></span> </div> <span>Картка Visa/MasterCard</span> </a>
+                        <a href="#" class="method__block">
+                          <div class="method__icon"> <span class="icon-privat24"></span> </div> <span>Приват 24</span> </a>
+                        <a href="#" class="method__block">
+                          <div class="method__icon"> <span class="icon-terminals"></span> </div> <span>Термінали України</span> </a>
+                        <a href="#" class="method__block">
+                          <div class="method__icon"> <span class="icon-webmoney"></span> </div> <span>Webmoney</span> </a>
+                        <a href="#" class="method__block">
+                          <div class="method__icon"> <span class="icon-paypal"></span> </div> <span>PayPal</span> </a>
+                      </div>
+                      <div class="data"> <span class="data__title">Введіть наступні данні</span>
+                        <form class="data__card">
+                          <div class="data__card__number"> <label for="card-number">Номер карти</label> <input type="text" id="card-number"> <input type="text"> <input type="text"> <input type="text"> </div>
+                          <div class="data__card__date"> <label for="expiration-date">Термін дії</label> <input type="text" id="expiration-date"> </div>
+                          <div class="data__card__cvv"> <label for="cvv">CVC/CVV</label> <input type="text" id="cvv"> </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div> <button class="bg-color">Допомогти</button> </div>
+              </div>
             </div>
           </div>
+          <!-- MODAL FORM ENDS -->
         </div>
-        <!-- MODAL FORM ENDS -->
       </div>
     </div>
     <!-- END content -->
