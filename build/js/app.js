@@ -2285,13 +2285,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
  * VERSION: 1.20.2
  * DATE: 2017-06-30
  * UPDATES AND DOCS AT: http://greensock.com
- * 
+ *
  * Includes all of the following: TweenLite, TweenMax, TimelineLite, TimelineMax, EasePack, CSSPlugin, RoundPropsPlugin, BezierPlugin, AttrPlugin, DirectionalRotationPlugin
  *
  * @license Copyright (c) 2008-2017, GreenSock. All rights reserved.
  * This work is subject to the terms at http://greensock.com/standard-license or for
  * Club GreenSock members, the software agreement that was issued with your membership.
- * 
+ *
  * @author: Jack Doyle, jack@greensock.com
  **/
 var _gsScope = "undefined" != typeof module && module.exports && "undefined" != typeof global ? global : undefined || window;(_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function () {
@@ -4637,18 +4637,35 @@ document.addEventListener('DOMContentLoaded', function () {
     onEnter: function onEnter() {
 
       var acc = document.getElementsByClassName('accordion');
+      // console.log(acc);
 
-      var i = void 0;
-
-      for (i = 0; i < acc.length; i++) {
+      for (var i = 0; i < acc.length; i++) {
         acc[i].onclick = function () {
           this.classList.toggle('acc-active');
           var hide = this.nextElementSibling;
+          var hideBlock = hide.getElementsByClassName('_hide__block');
+
+          // console.dir(hideBlock);
+          // console.log(hide.style.maxHeight);
 
           if (hide.style.maxHeight) {
+
             hide.style.maxHeight = null;
+
+            (function () {
+              for (var _i = 0; _i < hideBlock.length; _i++) {
+                hideBlock[_i].style.visibility = 'hidden';
+              }
+            })();
           } else {
+
             hide.style.maxHeight = hide.scrollHeight + 'px';
+
+            (function () {
+              for (var _i2 = 0; _i2 < hideBlock.length; _i2++) {
+                hideBlock[_i2].style.visibility = 'visible';
+              }
+            })();
           }
         };
       }

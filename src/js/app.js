@@ -189,18 +189,37 @@ document.addEventListener('DOMContentLoaded', function() {
     onEnter: function() {
 
       let acc = document.getElementsByClassName('accordion');
+      // console.log(acc);
 
-      let i;
-
-      for (i = 0; i < acc.length; i++) {
+      for (let i = 0; i < acc.length; i++) {
         acc[i].onclick = function() {
           this.classList.toggle('acc-active');
           let hide = this.nextElementSibling;
+          let hideBlock = hide.getElementsByClassName('_hide__block');
+
+          // console.dir(hideBlock);
+          // console.log(hide.style.maxHeight);
 
           if (hide.style.maxHeight) {
+
             hide.style.maxHeight = null;
+
+            (() => {
+              for (let i = 0; i < hideBlock.length; i++) {
+                hideBlock[i].style.visibility = 'hidden';
+              }
+            })();
+
           } else {
+
             hide.style.maxHeight = hide.scrollHeight + 'px';
+
+            (() => {
+              for (let i = 0; i < hideBlock.length; i++) {
+                hideBlock[i].style.visibility = 'visible';
+              }
+            })();
+
           }
         };
       }

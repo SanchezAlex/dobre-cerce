@@ -649,6 +649,9 @@
 			outline: none
 			transition: 0.4s
 
+			//&:hover > .projects__block > .hide__block
+			//	visibility: visible
+
 		.hide
 			max-height: 134px
 			transition: max-height 0.2s ease-out
@@ -658,6 +661,16 @@
 
 			&:after
 				opacity: 0
+
+			//> .hide__block
+			//	visibility: visible
+
+		._hide__block
+			visibility: hidden
+			transition: visibility .2s ease-out
+
+			//~ .projects__block__image > .accordion > .hide > .acc-active
+			//	visibility: visible
 
 		&__image
 			display: inline-block
